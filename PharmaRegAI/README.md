@@ -27,7 +27,6 @@ Finding relevant information across large regulatory documents can be time-consu
 PharmaRegAI addresses this problem by combining semantic search with a lightweight language model.
 
 The system retrieves relevant sections from regulatory documents and provides an answer together with the source document and page number.
-
 ---
 
 ## System Architecture
@@ -62,6 +61,7 @@ Regulatory PDF Documents
           v
        Streamlit
        Web Interface
+
 ## Evaluation Results
 
 The system was tested on a 20-question evaluation set spanning all 5 source documents (pharmacovigilance, distribution practices, hospital pharmacy standards, drug recalls, and storage/transport requirements).
