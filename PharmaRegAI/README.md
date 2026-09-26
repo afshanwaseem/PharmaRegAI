@@ -62,3 +62,16 @@ Regulatory PDF Documents
           v
        Streamlit
        Web Interface
+## Evaluation Results
+
+The system was tested on a 20-question evaluation set spanning all 5 source documents (pharmacovigilance, distribution practices, hospital pharmacy standards, drug recalls, and storage/transport requirements).
+
+| Metric | Score |
+|---|---|
+| Factual correctness | 20/20 (100%) |
+| Source relevance (top-1 retrieval) | 20/20 (100%) |
+| Answer completeness | 2/20 (10%) |
+
+**Key finding:** Retrieval consistently surfaces the correct source passage, and generated answers are factually accurate, but often terse or partial rather than fully explanatory. This is a known limitation of FLAN-T5's extractive generation style on longer regulatory text. Retrieval quality is not the bottleneck here — generation is.
+
+**Future work:** Swapping the generation stage for a larger instruction-tuned model (e.g. `flan-t5-large`, or a hosted LLM API) would likely improve completeness without changing the retrieval pipeline, since the underlying retrieved context is already accurate.
