@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-.env
-.env.*
-*.key
-*.pem
-.ipynb_checkpoints/
-.streamlit/secrets.toml
-ngrok.yml
